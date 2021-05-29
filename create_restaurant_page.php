@@ -12,6 +12,7 @@ session_start();
         <title>Restaurant</title>
     </head>
     <body>
+        <?php require 'html_parts/header.php'?>
 
         <form action="/controller.php" method="post" id="form">
             <h3>Ajoutez votre restaurant</h3>
