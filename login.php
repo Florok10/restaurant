@@ -1,19 +1,33 @@
-<body class="text-center">
-    <form class="form-signin">
-      <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Address mail" name="email">
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" name="password_user">
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> J'accepte les <a href="#"><cgu class="03"></cgu></a>
-        </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
-    </form>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <title>Connexion</title>
+    </head>
+    <body class="text-center">
+        <?php require 'html_parts/header.php'?>
+
+        <h1 class="text-center h3 mb-3 font-weight-normal">Se connecter</h1>
+
+        <form id="form_signin" class="form-signin d-flex flex-wrap flex-column align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+
+            <div>
+                <label for="inputEmail" class="sr-only">Adresse email</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Address mail" name="email" for="form_signin">
+            </div>
+
+            <div class="form-group">
+                <label for="inputPassword" class="sr-only">Mot de passe</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" name="password_user" for="form_signin">
+            </div>
+                
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block" type="submit" for="form_signin">Sign in</button>
+            </div>
+
+        </form>
   
 
-</body>
+    </body>
