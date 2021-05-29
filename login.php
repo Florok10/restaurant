@@ -7,7 +7,7 @@
         <title>Connexion</title>
     </head>
     <body class="text-center">
-        <?php require 'header.php'?>
+        <?php require 'html_parts/header.php'?>
 
         <h1 class="text-center h3 mb-3 font-weight-normal">Se connecter</h1>
 

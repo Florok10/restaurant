@@ -12,7 +12,7 @@ session_start();
         <title>Restaurant</title>
     </head>
     <body>
-        <?php require 'header.php'?>
+        <?php require 'html_parts/header.php'?>
 
         <form action="controller.php" method="post" id="form_restaurant" class="d-flex flex-wrap flex-column align-items-center justify-content-center justify-content-md-between py-3 mb-4">
             <h1>Ajoutez votre restaurant</h3>
