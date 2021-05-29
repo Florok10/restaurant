@@ -1,7 +1,7 @@
 <?php
 
-require_once 'dao.php';
-require_once 'controller.php';
+require_once ('dao.php');
+require_once ('controller.php');
 
 class Restaurant {
     private $_nameOfRestaurant;
@@ -11,42 +11,44 @@ class Restaurant {
     private $_descriptionOfRestaurant;
 
     public function __construct($nameOfRestaurant, $addressOfRestaurant, $picture, $typeOfRestaurant, $descriptionOfRestaurant) {
-        SetName($nameOfRestaurant);
-        SetAddress($addressOfRestaurant);
-        SetPicture($picture);
-        SetType($typeOfRestaurant);
-        SetDescription($descriptionOfRestaurant);
-    }
-    public function SetName($nameOfRestaurant) {
-        $this->_nameOfRestaurant = $nameOfRestaurant;
-    }
-    public function SetAddress($addressOfRestaurant) {
-        $this->_addressOfRestaurant = $addressOfRestaurant;
-    }
-    public function SetPicture($picture) {
-        $this->_picture = $picture;
-    }
-    public function SetType($typeOfRestaurant) {
-        $this->_typeOfRestaurant = $typeOfRestaurant;
-    }
-    public function SetDescription($description) {
-        $this->_description = $descriptionOfRestaurant;
-    }
+        // SetName($nameOfRestaurant);
+        // SetAddress($addressOfRestaurant);
+        // SetPicture($picture);
+        // SetType($typeOfRestaurant);
+        // SetDescription($descriptionOfRestaurant);
 
-    public function GetName(){
-        return $this->_nameOfRestaurant;
-    }
-    public function GetAddress(){
-        return $this->_addressOfRestaurant;
-    }
-    public function GetPicture(){
-        return $this->_picture;
-    }
-    public function GetType(){
-        return $this->_typeOfRestaurant;
-    }
-    public function GetDescription(){
-        return $this->_descriptionOfRestaurant;
+    
+        function SetName($nameOfRestaurant) {
+            $this->_nameOfRestaurant = $nameOfRestaurant;
+        }
+        function SetAddress($addressOfRestaurant) {
+            $this->_addressOfRestaurant = $addressOfRestaurant;
+        }
+        function SetPicture($picture) {
+            $this->_picture = $picture;
+        }
+        // function SetType($typeOfRestaurant) {
+        //     $this->_typeOfRestaurant = $typeOfRestaurant;
+        // }
+        function SetDescription($description) {
+            $this->_description = $descriptionOfRestaurant;
+        }
+
+        function GetName(){
+            return $this->_nameOfRestaurant;
+        }
+        function GetAddress(){
+            return $this->_addressOfRestaurant;
+        }
+        function GetPicture(){
+            return $this->_picture;
+        }
+        // function GetType(){
+        //     return $this->_typeOfRestaurant;
+        // }
+        function GetDescription(){
+            return $this->_descriptionOfRestaurant;
+        }
     }
 
     public static function envoiDonneesRestaurant(){
