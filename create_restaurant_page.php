@@ -1,3 +1,8 @@
+<?php
+session_start();
+$_SESSION['role'] = 'administrateur';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -10,7 +15,7 @@
     <body>
 
         <form action="/controller.php" method="post" id="form">
-            <h3>S'inscrire</h3>
+            <h3>Ajoutez votre restaurant</h3>
 
             <div class="col-auto">
                 <div class="form-group">
@@ -19,7 +24,7 @@
                 <div class="form-group">
                     <input type="text" placeholder="Adresse" class="col-sm-2 col-form-label col-form-label-lg" name="addressOfRestaurant">
                 </div>    
-                <div class="mb-3">
+                <div class="form-group">
                     <label for="formFile" class="form-label">Sélectionnez une image pour votre restaurant</label>
                     <input  id="formFile" type="file" placeholder="Image" class="col-sm-2 col-form-label col-form-label-lg" name="picture">
                 </div>
@@ -32,7 +37,7 @@
                     <option value="Asiatique">Asiatique</option>
                 </select>
                 <div class="form-group">
-                    <textarea id="description" placeholder="Description" class="col-lg-2 col-form-label col-form-label-lg" rows="5" cols="50" name="descriptionOfRestaurant">
+                    <textarea id="description" placeholder="Description" class="form-control" rows="5" cols="50" name="descriptionOfRestaurant">
 
                     </textarea>
                 </div>
