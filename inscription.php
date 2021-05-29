@@ -46,7 +46,7 @@ $_SESSION['role'] = 'admin';?>
                 <label class="form-check-label" for="exampleCheck1">Vous confirmez accepter nos <a href="#">conditions générales d'utilisations</a></label>
             </div>
 
-            <button type="submit" class="btn btn-primary">Je m'inscris</button>
+            <button type="submit" class="btn btn-primary" for="form_register">Je m'inscris</button>
 
         </form>
 

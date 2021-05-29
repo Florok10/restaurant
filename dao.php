@@ -10,6 +10,6 @@ $charset = 'UTF8';
 $user = 'phpmyadmin';
 $password = 'root';
 
-$dsn = "mysql:host=$host:$port;dbname=$dbname;charset=$charset";
+$dsn= "Mysql:host=$host:$port;dbname=$dbname;charset=$charset;";
 
 ?>

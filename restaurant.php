@@ -10,7 +10,7 @@ class Restaurant {
     private $_descriptionOfRestaurant;
 
     public function __construct($nameOfRestaurant, $addressOfRestaurant, $picture, $typeOfRestaurant, $descriptionOfRestaurant) {
-        SetName($nameOfRestaurant)
+        SetName($nameOfRestaurant);
     }
     public function SetName($nameOfRestaurant) {
         $this->_nameOfRestaurant = $nameOfRestaurant;
@@ -44,18 +44,16 @@ class Restaurant {
         return $this->_descriptionOfRestaurant;
     }
 
-    $restaurant1 = new Restaurant($nameOfRestaurant, $addressOfRestaurant, $picture, $typeOfRestaurant, $descriptionOfRestaurant) ;
-
     public static function envoiDonnees(){
     try {
         $dbh = new PDO ($dsn, $user, $password);
 
     } catch(PDOException $e) {
-        echo 'Une erreur est survenue'
+        echo 'Une erreur est survenue';
     }
 
     $sth = $dbh->prepare('INSERT INTO restaurant_template(nameOfRestaurant, addressOfRestaurant, picture, typeOfRestaurant, descriptionOfRestaurant)
-    VALUES(:nom, :addresse, :picture, :typeOfRestaurant, :descriptionOfRestaurant);');
+    VALUES(:nameOfRestaurant, :addressOfRestaurant, :picture, :typeOfRestaurant, :descriptionOfRestaurant);');
 
     $sth->bindParam(":nameOfRestaurant", $this->getName());
     $sth->bindParam(":addressOfRestaurant", $this->getAddress());
