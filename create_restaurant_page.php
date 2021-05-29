@@ -14,7 +14,7 @@ session_start();
     <body>
         <?php require 'html_parts/header.php'?>
 
-        <form action="/controller.php" method="post" id="form">
+        <form action="/controller.php" method="post" id="form" class="d-flex flex-wrap flex-column align-items-center justify-content-center justify-content-md-between py-3 mb-4">
             <h3>Ajoutez votre restaurant</h3>
 
             <div class="col-auto">

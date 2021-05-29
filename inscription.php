@@ -16,7 +16,9 @@ $_SESSION['role'] = 'admin';?>
 
     <?php require 'html_parts/header.php' ?>
 
-        <form class="d-flex flex-wrap flex-column align-items-center justify-content-center justify-content-md-between py-3 mb-4" action="controller.php" method="post">
+    <h1 class="text-center">S'inscrire</h1>
+
+        <form class="d-flex flex-wrap flex-column align-items-center justify-content-center justify-content-md-between py-3 mb-4" action="controller.php" method="POST">
 
             <div class="form-group">
                 <label for="first_name_input" class="form-label">Votre prénom</label>
