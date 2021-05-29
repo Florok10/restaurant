@@ -19,23 +19,24 @@ if (isset( $_POST['submit_register'] ) ) {
   $email = $_POST['email'];
   $passwordUser = $_POST['password_user'];
   $cgu = $_POST['checkbox_cgu'];
+  
 }
 
-try {
-  $dsh = new PDO($dsn,$user,$password);
-    }
-    catch (Exception $e) {
-      die('Erreur : ' . $e->getMessage());
-    }
+// try {
+//   $dsh = new PDO($dsn,$user,$password);
+//     }
+//     catch (Exception $e) {
+//       die('Erreur : ' . $e->getMessage());
+//     }
 
-    $preparation_requete = $dsh->prepare('INSERT INTO restaurant_template(first_name, last_name, email, password_user)
-    VALUES (:first_name, :last_name, :email, :password_user);');
-    $preparation_requete->bindParam(':first_name', $firstName);
-    $preparation_requete->bindParam(':last_name', $lastName);
-    $preparation_requete->bindParam(':email', $email);
-    $preparation_requete->bindParam(':password_user', $passwordUser;
+//     $preparation_requete = $dsh->prepare('INSERT INTO (first_name, last_name, email, password_user)
+//     VALUES (:first_name, :last_name, :email, :password_user);');
+//     $preparation_requete->bindParam(':first_name', $firstName);
+//     $preparation_requete->bindParam(':last_name', $lastName);
+//     $preparation_requete->bindParam(':email', $email);
+//     $preparation_requete->bindParam(':password_user', $passwordUser;
       
-    $preparation_requete->execute();
+//     $preparation_requete->execute();
   
 try {
     $dsh = new PDO($dsn,$user,$password);

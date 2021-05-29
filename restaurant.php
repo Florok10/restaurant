@@ -44,7 +44,7 @@ class Restaurant {
         return $this->_descriptionOfRestaurant;
     }
 
-    public static function envoiDonnees(){
+    public static function envoiDonneesRestaurant(){
     try {
         $dbh = new PDO($dsn, $user, $password);
 
@@ -63,10 +63,7 @@ class Restaurant {
 
     $sth->execute();
 
-
-
-    
-    
+    return;
     }
 }
 

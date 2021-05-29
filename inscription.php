@@ -18,7 +18,7 @@ $_SESSION['role'] = 'admin';?>
 
     <h1 class="text-center">S'inscrire</h1>
 
-        <form id="form_register" class="form-signup d-flex flex-wrap flex-column align-items-center justify-content-center justify-content-md-between py-3 mb-4" action="controller.php" method="POST">
+        <form id="form_register" class="form-signup d-flex flex-wrap flex-column align-items-center justify-content-center justify-content-md-between py-3 mb-4" action="controller.php" method="post">
 
             <div class="form-group">
                 <label for="first_name_input" class="form-label">Votre prénom</label>
@@ -46,7 +46,7 @@ $_SESSION['role'] = 'admin';?>
                 <label class="form-check-label" for="exampleCheck1">Vous confirmez accepter nos <a href="#">conditions générales d'utilisations</a></label>
             </div>
 
-            <button type="submit" class="btn btn-primary" for="form_register">Je m'inscris</button>
+            <button type="submit" class="btn btn-primary" name="submit_register" for="form_register">Je m'inscris</button>
 
         </form>
 
