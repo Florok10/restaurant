@@ -47,3 +47,4 @@ class User {
     public function GetReservation(){
         return $this->_reservation;
     }
+}

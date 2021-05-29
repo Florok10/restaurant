@@ -2,6 +2,7 @@
 
 require 'dao.php';
 require 'restaurant.php';
+require 'user.php';
 
 if (isset( $_POST['submit_restaurant'] ) ) {
     $nameOfRestaurant = $_POST['nameOfRestaurant'];
@@ -9,6 +10,10 @@ if (isset( $_POST['submit_restaurant'] ) ) {
     $picture = $_POST['picture'];
     $typeOfRestaurant = $_POST['typeOfRestaurant'];
     $descriptionOfRestaurant = $_POST['descriptionOfRestaurant'];
+
+    $resto=new Restaurant($nameOfRestaurant,$addressOfRestaurant,$picture,$typeOfRestaurant,$descriptionOfRestaurant);
+
+    $resto-> envoiDonneesRestaurant();
 
 
 }
@@ -38,21 +43,21 @@ try {
       
     $preparation_requete->execute();
   
-try {
-    $dsh = new PDO($dsn,$user,$password);
-      }
-      catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
-      }
+// try {
+//     $dsh = new PDO($dsn,$user,$password);
+//       }
+//       catch (Exception $e) {
+//         die('Erreur : ' . $e->getMessage());
+//       }
 
-      $preparation_requete = $dsh->prepare('INSERT INTO restaurant_template(nameOfRestaurant, addressOfRestaurant, picture, typeOfRestaurant, descriptionOfRestaurant)
-      VALUES (:nameOfRestaurant, :addressOfRestaurant, :picture, :typeOfRestaurant, :descriptionOfRestaurant);');
-      $preparation_requete->bindParam(':nameOfRestaurant', $nameOfRestaurant);
-      $preparation_requete->bindParam(':addressOfRestaurant', $addressOfRestaurant);
-      $preparation_requete->bindParam(':picture', $picture);
-      $preparation_requete->bindParam(':typeOfRestaurant', $typeOfRestaurant);
-      $preparation_requete->bindParam(':descriptionOfRestaurant', $descriptionOfRestaurant);
+//       $preparation_requete = $dsh->prepare('INSERT INTO restaurant_template(nameOfRestaurant, addressOfRestaurant, picture, typeOfRestaurant, descriptionOfRestaurant)
+//       VALUES (:nameOfRestaurant, :addressOfRestaurant, :picture, :typeOfRestaurant, :descriptionOfRestaurant);');
+//       $preparation_requete->bindParam(':nameOfRestaurant', $nameOfRestaurant);
+//       $preparation_requete->bindParam(':addressOfRestaurant', $addressOfRestaurant);
+//       $preparation_requete->bindParam(':picture', $picture);
+//       $preparation_requete->bindParam(':typeOfRestaurant', $typeOfRestaurant);
+//       $preparation_requete->bindParam(':descriptionOfRestaurant', $descriptionOfRestaurant);
         
-      $preparation_requete->execute();
+//       $preparation_requete->execute();
 
 ?>

@@ -1,6 +1,7 @@
 <?php
 
 require_once 'dao.php';
+require_once 'controller.php';
 
 class Restaurant {
     private $_nameOfRestaurant;
@@ -11,6 +12,10 @@ class Restaurant {
 
     public function __construct($nameOfRestaurant, $addressOfRestaurant, $picture, $typeOfRestaurant, $descriptionOfRestaurant) {
         SetName($nameOfRestaurant);
+        SetAddress($addressOfRestaurant);
+        SetPicture($picture);
+        SetType($typeOfRestaurant);
+        SetDescription($descriptionOfRestaurant);
     }
     public function SetName($nameOfRestaurant) {
         $this->_nameOfRestaurant = $nameOfRestaurant;
@@ -25,7 +30,7 @@ class Restaurant {
         $this->_typeOfRestaurant = $typeOfRestaurant;
     }
     public function SetDescription($description) {
-        $this->_description = $description;
+        $this->_description = $descriptionOfRestaurant;
     }
 
     public function GetName(){
@@ -62,8 +67,6 @@ class Restaurant {
     $sth->bindParam(":descriptionOfRestaurant", $this->getDescription());
 
     $sth->execute();
-
-    return;
     }
 }
 
