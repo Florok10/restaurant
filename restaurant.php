@@ -1,7 +1,6 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', TRUE);
-ini_set('display_startup_errors', TRUE);
+
+require_once 'dao.php';
 
 class Restaurant {
     private $_nameOfRestaurant;
@@ -56,7 +55,7 @@ class Restaurant {
     }
 
     $sth = $dbh->prepare('INSERT INTO restaurant_template(nameOfRestaurant, addressOfRestaurant, picture, typeOfRestaurant, descriptionOfRestaurant)
-    VALUES (:nom, :addresse, :picture, :typeOfRestaurant, :descriptionOfRestaurant);');
+    VALUES(:nom, :addresse, :picture, :typeOfRestaurant, :descriptionOfRestaurant);');
 
     $sth->bindParam(":nameOfRestaurant", $this->getName());
     $sth->bindParam(":addressOfRestaurant", $this->getAddress());

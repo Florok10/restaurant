@@ -14,7 +14,7 @@ $_SESSION['role'] = 'admin';?>
 
     <body>
 
-    <?php require 'html_parts/header.php' ?>
+    <?php require 'header.php' ?>
 
     <h1 class="text-center">S'inscrire</h1>
 
