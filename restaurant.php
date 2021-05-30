@@ -11,12 +11,12 @@ class Restaurant {
     private $_descriptionOfRestaurant;
 
     public function __construct($nameOfRestaurant, $addressOfRestaurant, $picture, $typeOfRestaurant, $descriptionOfRestaurant) {
-        // SetName($nameOfRestaurant);
-        // SetAddress($addressOfRestaurant);
-        // SetPicture($picture);
-        // SetType($typeOfRestaurant);
-        // SetDescription($descriptionOfRestaurant);
-
+        SetName($nameOfRestaurant);
+        SetAddress($addressOfRestaurant);
+        SetPicture($picture);
+        SetType($typeOfRestaurant);
+        SetDescription($descriptionOfRestaurant);
+    }
     
         function SetName($nameOfRestaurant) {
             $this->_nameOfRestaurant = $nameOfRestaurant;
@@ -27,9 +27,9 @@ class Restaurant {
         function SetPicture($picture) {
             $this->_picture = $picture;
         }
-        // function SetType($typeOfRestaurant) {
-        //     $this->_typeOfRestaurant = $typeOfRestaurant;
-        // }
+        function SetType($typeOfRestaurant) {
+            $this->_typeOfRestaurant = $typeOfRestaurant;
+        }
         function SetDescription($description) {
             $this->_description = $descriptionOfRestaurant;
         }
@@ -43,15 +43,15 @@ class Restaurant {
         function GetPicture(){
             return $this->_picture;
         }
-        // function GetType(){
-        //     return $this->_typeOfRestaurant;
-        // }
+        function GetType(){
+            return $this->_typeOfRestaurant;
+        }
         function GetDescription(){
             return $this->_descriptionOfRestaurant;
         }
     }
 
-    public static function envoiDonneesRestaurant(){
+    :static public function envoiDonneesRestaurant(){
     try {
         $dbh = new PDO($dsn, $user, $password);
 
@@ -69,6 +69,5 @@ class Restaurant {
     $sth->bindParam(":descriptionOfRestaurant", $this->getDescription());
 
     $sth->execute();
-    }
 }
 

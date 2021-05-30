@@ -18,7 +18,7 @@ $_SESSION['role'] = 'admin';?>
 
     <h1 class="text-center">S'inscrire</h1>
 
-        <form id="form_register" class="form-signup d-flex flex-wrap flex-column align-items-center justify-content-center justify-content-md-between py-3 mb-4" action="controller.php" method="post">
+        <form id="form_register" class="form-signup d-flex flex-wrap flex-column align-items-center justify-content-center justify-content-md-between py-3 mb-4" action="controller_register.php" method="post">
 
             <div class="form-group">
                 <label for="first_name_input" class="form-label">Votre prénom</label>
