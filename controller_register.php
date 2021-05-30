@@ -5,7 +5,6 @@
 
 require 'dao.php';
 require 'user.php';
-//j'ai une erreur 500 je trouve pas d'où ça vient si c'est une parenthèse ou un ; je saute par ma fenêtre
 if (isset( $_POST['submit_register'] ) ) {
     if (!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST['email']) && !empty($_POST['password_user']) && !empty($_POST['checkbox_cgu'])) {
     $firstName = $_POST['first_name'];
@@ -15,7 +14,7 @@ if (isset( $_POST['submit_register'] ) ) {
     $cgu = $_POST['checkbox_cgu'];
 
 
-//J'essaye de hasher le mdp
+        //fonction pour hasher le mdp
     $hashed_password = password_hash($passwordUser, PASSWORD_DEFAULT);
     }
 }
@@ -31,7 +30,7 @@ try {
       $preparation_requete->bindParam(':first_name', $firstName);
       $preparation_requete->bindParam(':last_name', $lastName);
       $preparation_requete->bindParam(':email', $email);
-      $preparation_requete->bindParam(':password_user', $hashed_password);
+      $preparation_requete->bindParam(':password_user', $hashed_password); //ici le mdp hashed
         
       $preparation_requete->execute();
 
