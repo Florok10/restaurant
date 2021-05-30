@@ -17,8 +17,8 @@ if (isset( $_POST['submit_register'] ) ) {
 
 //J'essaye de hasher le mdp
     $hashed_password = password_hash($passwordUser, PASSWORD_DEFAULT);
+    }
 }
-
 try {
     $dsh = new PDO($dsn,$user,$password);
       }
@@ -31,7 +31,7 @@ try {
       $preparation_requete->bindParam(':first_name', $firstName);
       $preparation_requete->bindParam(':last_name', $lastName);
       $preparation_requete->bindParam(':email', $email);
-      $preparation_requete->bindParam(':password_user', $passwordUser);
+      $preparation_requete->bindParam(':password_user', $hashed_password);
         
       $preparation_requete->execute();
 
