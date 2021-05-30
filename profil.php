@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<?php session_start();
+$_SESSION['role'] = 'admin';?><!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8">

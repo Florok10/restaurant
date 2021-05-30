@@ -5,11 +5,11 @@
 
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <!-- <li><a href="#" class="nav-link px-2 link-secondary">Mon profil</a></li> -->
-            <li><a href="#" class="nav-link px-2 link-dark">Restaurants</a></li>
+            <li><a href="create_restaurant_page.php" class="nav-link px-2 link-dark">Restaurants</a></li>
         </ul>
 
         <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-primary me-2">Connexion</button>
-            <button type="button" class="btn btn-primary">S'inscrire</button>
+            <a href="login.php"><button type="button" class="btn btn-outline-primary me-2">Connexion</button></a>
+            <a href="inscription.php"><button type="button" class="btn btn-primary">S'inscrire</button></a>
         </div>
     </header>

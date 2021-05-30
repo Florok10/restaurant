@@ -51,7 +51,7 @@ class Restaurant {
         }
     }
 
-    :static public function envoiDonneesRestaurant(){
+    static public function envoiDonneesRestaurant(){
     try {
         $dbh = new PDO($dsn, $user, $password);
 

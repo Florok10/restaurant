@@ -1,5 +1,9 @@
-<?php
-session_start();
+<?php //session_start();
+//$_SESSION['role'('admin')] = 1;
+//$_SESSION['role'('customer')] = 2;
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +16,9 @@ session_start();
         <title>Restaurant</title>
     </head>
     <body>
+
+    <?php if([]) ?>
+
         <?php require 'html_parts/header.php'?>
 
         <form action="controller.php" method="post" id="form_restaurant" class="d-flex flex-wrap flex-column align-items-center justify-content-center justify-content-md-between py-3 mb-4">
