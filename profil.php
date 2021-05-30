@@ -7,6 +7,7 @@
         <title>Mon profil</title>
     </head>
     <body>
+        <?php require 'html_parts/header.php'?>
         <div class="d-flex flex-wrap flex-column align-items-center justify-content-center justify-content-md-between py-3 mb-4">
             <p>Mon <?php $firstName ?></p>
             <p>Mon <?php $lastName ?></p>
