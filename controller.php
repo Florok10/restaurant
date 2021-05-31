@@ -4,8 +4,10 @@ require 'dao.php';
 // require 'restaurant.php';
 require 'user.php';
 
+  //récupère le formulaire pour création de resto
 if (isset( $_POST['submit_restaurant'] ) ) {
   if (!empty($_POST['nameOfRestaurant']) && !empty($_POST['addressOfRestaurant']) && !empty($_POST['typeOfRestaurant'])) {
+    
     $nameOfRestaurant = $_POST['nameOfRestaurant'];
     $addressOfRestaurant = $_POST['addressOfRestaurant'];
     $picture = $_POST['picture'];
@@ -47,7 +49,7 @@ if (isset( $_POST['submit_restaurant'] ) ) {
 try {
     $dsh = new PDO($dsn,$user,$password);
       }
-      catch (Exception $e) {
+      catch (Exception $e) {    //préparation et execution de la requête pour ajouter un resto
         die('Erreur : ' . $e->getMessage());
       }
 

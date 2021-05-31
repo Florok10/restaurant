@@ -50,7 +50,7 @@ class Restaurant {
             return $this->_descriptionOfRestaurant;
         }
     }
-
+//fonction qui devait être appelé pour créer un restaurant avec un 
     static public function envoiDonneesRestaurant(){
     try {
         $dbh = new PDO($dsn, $user, $password);

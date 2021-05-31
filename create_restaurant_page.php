@@ -1,6 +1,7 @@
-<?php //session_start();
-//$_SESSION['role'('admin')] = 1;
-//$_SESSION['role'('customer')] = 2;
+<?php // session_start();
+//$_SESSION['role'] = 1;
+
+//tentative de création de la session -->
 
 
 
@@ -13,17 +14,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <title>Restaurant</title>
+        <title>Restaurant</title>   
     </head>
     <body>
+            <!-- script pour faire apparaitre le form pour ajouter un restaurant en fonction du role-->
+    <script type="text/javascript">
+        // constFormRestaurantDisplay = document.getElementById("form_restaurant");
+                if($_SESSION['role'] = 1){
+                    document.write("<form action="controller.php" method="post" id="form_restaurant" class="d-flex flex-wrap flex-column align-items-center justify-content-center justify-content-md-between py-3 mb-4">
 
-    <?php if([]) ?>
 
-        <?php require 'html_parts/header.php'?>
-
-        <form action="controller.php" method="post" id="form_restaurant" class="d-flex flex-wrap flex-column align-items-center justify-content-center justify-content-md-between py-3 mb-4">
-            <h1>Ajoutez votre restaurant</h3>
-
+            <!-- form pour ajouter un restaurant à la liste -->
             <div class="col-auto">
                 <div class="form-group">
                     <input type="text" placeholder="Nom" class="col-sm-2 col-form-label col-form-label-lg" name="nameOfRestaurant" for="form_restaurant">
@@ -33,7 +34,8 @@
                 </div>    
                 <div class="form-group">
                     <label for="formFile" class="form-label">Sélectionnez une image pour votre restaurant</label>
-                    <input  id="formFile" type="file" placeholder="Image" class="col-sm-2 col-form-label col-form-label-lg" name="picture" for="form_restaurant">
+                    <input  id="formFile" type="file" placeholder="Image" class="col-sm-2 col-form-label col-form-label-lg" name="picture" for="form_restaurant"
+                    accept="image/png, image/jpeg, image/jpg, image/svg">
                 </div>
                 <select class="form-select form-select-lg mb-3" name="typeOfRestaurant" id="type">
                     <option selected>Selectionnez le type de restaurant</option>
@@ -54,7 +56,18 @@
                 <button type="submit" for="form_restaurant" class="btn btn-primary" name="submit_restaurant">Envoyer</button>
 
             </div>
-        </form>
+            </form>")
+                    
+                }
+
+    </script>
+
+
+
+        <?php require 'html_parts/header.php'?>
+
+
+        <h1 class="text-center">Nos restaurants</h1>
         
     </body>
 </html>

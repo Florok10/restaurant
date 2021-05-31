@@ -12,4 +12,6 @@ $password = 'root';
 
 $dsn= "mysql:host=$host:$port;dbname=$dbname;charset=$charset;";
 
+//les variables qui vont servir à se connecter à la bdd
+
 ?>
