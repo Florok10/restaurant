@@ -35,7 +35,7 @@ try {
       $preparation_requete->execute();
 
     if (isset( $_POST['submit_register'] ) ) { 
-        header('Location: /restaurant/restaurant/login.php');
+        header('Location: /restaurant/restaurant/login.php'); //redirection vers la page de connexion
         exit();
     }
       ?>

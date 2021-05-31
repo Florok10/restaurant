@@ -16,7 +16,7 @@ $_SESSION['role'] = 'user';
 
     <body>
 
-    <?php require 'html_parts/header.php'?>
+    <?php require_once 'html_parts/header.php'?>
 
     <h1 class="text-center">S'inscrire</h1>
 
