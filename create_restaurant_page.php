@@ -56,10 +56,10 @@
                 <button type="submit" for="form_restaurant" class="btn btn-primary" name="submit_restaurant">Envoyer</button>
 
             </div>
-            </form>")
+            </form>
                     
                 }
-
+                
     </script>
 
 
@@ -68,6 +68,12 @@
 
 
         <h1 class="text-center">Nos restaurants</h1>
-        
+        <ul class="d-flex flex-wrap flex-column align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+        <li><?php $restaurant ?> <button><a href="#">Voir les détails</a></button></li>
+        <li><?php $restaurant ?> <button><a href="#">Voir les détails</a></button></li>
+        <li><?php $restaurant ?> <button><a href="#">Voir les détails</a></button></li>
+        <li><?php $restaurant ?> <button><a href="#">Voir les détails</a></button></li>
+        <li><?php $restaurant ?> <button><a href="#">Voir les détails</a></button></li>
+        </ul>
     </body>
 </html>
