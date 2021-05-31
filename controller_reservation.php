@@ -7,7 +7,7 @@ if (isset( $_POST['submit_reservation'] ) ) {
     $lastName = $_POST['last_name'];
     $email = $_POST['email'];
     $tel = $_POST['tel'];
-    $cgu = $_POST['nbPersonne'];
+    $nbPersonne = $_POST['nbPersonne'];
 }
 try {
     $dsh = new PDO($dsn,$user,$password);
@@ -16,7 +16,7 @@ try {
         die('Erreur : ' . $e->getMessage());
       }
   
-      $preparation_requete = $dsh->prepare('INSERT INTO user(first_name, last_name, email, tel, nbPersonne)
+      $preparation_requete = $dsh->prepare('INSERT INTO reservation(first_name, last_name, email, tel, nbPersonne)
       VALUES (:first_name, :last_name, :email, :tel, :nbPersonne);');
       $preparation_requete->bindParam(':first_name', $firstName);
       $preparation_requete->bindParam(':last_name', $lastName);

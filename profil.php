@@ -1,5 +1,9 @@
-<?php session_start();
-$_SESSION['role'] = 'admin';?><!DOCTYPE html>
+<?php 
+session_start();
+$_SESSION['role'] = 'admin';
+$_SESSION['role'] = 'user';
+require_once 'dao.php';
+?><!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
@@ -15,7 +19,14 @@ $_SESSION['role'] = 'admin';?><!DOCTYPE html>
             <div class="text-center container"><p><?php $lastName ?></p></div>
             <div class="text-center container"><p><?php $email ?></p></div>
             <div class="text-center container"><p><?php $passwordUser ?></p></div>
-            <div class="text-center container"><p>Mes réservations <?php $reservation ?></p></div>
+            <div class="text-center container"><p>Mes réservations <?php $reservation //variable qui contient le nombre de réservation lié à l'utilisateur ?></p></div>
         </div>
+
+        <?php //création de la variable qui récupère dans la bdd la réservation de l'user
+        $reservation = $dsn->prepare('SELECT id FROM user WHERE reservation');
+        $req->execute([$_POST['reservation']]);
+        $users = $req->fetch();
+        die();
+        ?>
     </body>
 </html>
