@@ -1,12 +1,3 @@
-<?php // session_start();
-//$_SESSION['role'] = 1;
-
-//tentative de création de la session -->
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
     <head>

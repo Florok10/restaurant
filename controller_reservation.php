@@ -22,7 +22,7 @@ try {
       $preparation_requete->bindParam(':last_name', $lastName);
       $preparation_requete->bindParam(':email', $email);
       $preparation_requete->bindParam(':tel', $tel);
-      $preparation_requete->bindParam(':nbPersonne', $nbPersonne); //ici le mdp hashed
+      $preparation_requete->bindParam(':nbPersonne', $nbPersonne);
         
       $preparation_requete->execute();
 

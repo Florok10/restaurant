@@ -46,8 +46,8 @@ if (isset( $_POST['submit_restaurant'] ) ) {
       
 //     $preparation_requete->execute();
   
-try {
-    $dsh = new PDO($dsn,$user,$password);
+      try {
+        $dsh = new PDO($dsn,$user,$password);
       }
       catch (Exception $e) {    //préparation et execution de la requête pour ajouter un resto
         die('Erreur : ' . $e->getMessage());
@@ -81,4 +81,15 @@ try {
             
       //     $preparation_requete->execute();
 
+
+      try {
+        $dsh = new PDO($dsn,$user,$password);
+      }
+      catch (Exception $e) {    //préparation et execution de la requête pour ajouter un resto
+        die('Erreur : ' . $e->getMessage());
+      }
+
+      $sth = $dsh->prepare("SELECT * FROM user WHERE email = :email")
+
+      sth->bindParam(":mail" , $this->)
 ?>

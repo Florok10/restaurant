@@ -1,7 +1,7 @@
 <?php
 
-require_once ('dao.php');
-require_once ('controller.php');
+require_once 'dao.php';
+require_once 'controller.php';
 
 class Restaurant {
     private $_nameOfRestaurant;
@@ -51,11 +51,12 @@ class Restaurant {
         }
     }
 //fonction qui devait être appelé pour créer un restaurant avec un 
-    static public function envoiDonneesRestaurant(){
+    static public function envoiDonneesRestaurant($dsn, $user, $password){
     try {
         $dbh = new PDO($dsn, $user, $password);
 
     } catch(PDOException $e) {
+        $e->getMessage();
         echo 'Une erreur est survenue';
     }
 

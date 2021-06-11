@@ -23,7 +23,7 @@ require_once 'dao.php';
         </div>
 
         <?php //création de la variable qui récupère dans la bdd la réservation de l'user
-        $reservation = $dsn->prepare('SELECT id FROM user WHERE reservation');
+        $reservation = $dsn->prepare('SELECT * FROM user WHERE reservation');
         $req->execute([$_POST['reservation']]);
         $users = $req->fetch();
         die();
